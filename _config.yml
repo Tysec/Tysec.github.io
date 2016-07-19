@@ -2,36 +2,41 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
-timezone:
+# Site #整站的基本信息
+title: CRUMBS #网站标题
+subtitle: DON’T LEAVE CRUMBS #网站副标题
+description: What are crumbs? The crumbs I’m talking about are the choice we make that make us have to look over our shoulder in the future. #网站描述
+author: Tysec.Huang #网站作者，在下方显示
+language: zh-CN #网站语言
+email: xrey.huang@gmail.com #联系邮箱
+timezone: Asia/Shanghai #网站时区
+avatar: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+url: http://tysec.github.io #域名
+root: / #网站根目录
+permalink: :year/:month/:day/:title/ #永久链接格式
+permalink_defaults: #永久链接中各部分的默认值
 
-# Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
 
-# Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
+# Directory 目录配置
+source_dir: source #资源文件夹，存放内容
+public_dir: public #公共文件夹，存放生成的站点文件
+tag_dir: tags #标签文件夹
+archive_dir: archives #归档文件夹
+category_dir: categories #分类文件夹
+code_dir: downloads/code #Include code文件夹
+i18n_dir: :lang #国际化文件夹
+skip_render:  #跳过指定文件的渲染，你可使用glob来配置路径
+
+# Writing 写作配置
+new_post_name: :title.md # File name of new posts 新文章的文件名称
+default_layout: post #默认布局
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
+max_open_file: 100
+multi_thread: true
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -48,6 +53,15 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+# Archives
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 2
+category: 2
+tag: 2
+
+
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
@@ -60,10 +74,24 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
+# Disqus #社会化评论disqus，我使用多说，在主题中配置
+disqus_shortname:
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+
+# 添加社交链接
+social:
+  github: https://github.com/tysec
+
+# 添加友情链接
+# title
+links_title: Links
+# links
+links:
+  Github: https://www.github.com
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
